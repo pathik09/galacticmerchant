@@ -1,0 +1,49 @@
+	{
+"dictionaries":[
+{
+"galacticCurrency":"glob",
+"romanNumeral":"I"
+},
+{
+"galacticCurrency":"prok",
+"romanNumeral":"V"
+},
+{
+"galacticCurrency":"pish",
+"romanNumeral":"X"
+},
+{
+"galacticCurrency":"tegi",
+"romanNumeral":"L"
+}
+]
+}
+{
+		"galacticQuantity":"glob prok"
+	}
+	{
+		"decimalValue":1
+	}
+	{
+	"productConfigs": [
+		{
+			"productName":"Silver",
+			"quantity":"glob glob",
+			"credit": 34
+		},
+{
+			"productName":"silver",
+			"quantity":"glob glob",
+			"credit": 34
+		}
+	]
+}
+{
+		"productName":"Silver",
+		"quantity":"glob prok"
+	}
+	{
+		"productName":"Silver",
+		"quantity":"glob glob"
+	}
+	

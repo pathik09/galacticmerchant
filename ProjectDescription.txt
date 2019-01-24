@@ -1,0 +1,92 @@
+This rest project is created using spring boot and spring data(using in-memory database h2).
+It is a rest api project,which has four apis.This project is built using maven.
+Commands for running this application:-
+mvn compile
+mvn install
+mvn spring-boot:run
+This will host  the api's on 8080(internal omcat of spring boot).
+Project developed follows SOLID RUles of software development, in addition to that it 
+implements following design patterns,
+1)Facade Design Pattern(hiding complex part from the main class.)
+2).Business Delegate(Delegating business logic to other classes).
+3). FrontController(Spring follows it.)
+4.Dependency Injection(Spring follows it.)
+and many more.....
+
+Total numner of files in the project. 38(inclding classes/interfaces).
+
+Two Tables are created for this application.
+1). Dictionary
+2). ProductConfig
+1). Dictionery Api :- Which will save the galactic quantity along with roman numerals in the 
+table named Dictionary.
+Request for this api-
+	{
+"dictionaries":[
+{
+"galacticCurrency":"glob",
+"romanNumeral":"I"
+},
+{
+"galacticCurrency":"prok",
+"romanNumeral":"V"
+},
+{
+"galacticCurrency":"pish",
+"romanNumeral":"X"
+},
+{
+"galacticCurrency":"tegi",
+"romanNumeral":"L"
+}
+]
+}
+output:- 204 response with noo data(data  is stored on the table Dictionary).
+2). Decimal api:-
+which will retrieve the roman numeral from the galctic quantity provided
+ and calculate its decimal value.
+ Sample Request is,
+ {
+		"galacticQuantity":"glob prok"
+	}
+	output:-Status code 200 with data,
+	 {
+		"Decimal Value":5
+	}
+	
+3).ProductConfig Api-
+Which will store the value in the ProductConfig after checking if it is a valid data.
+"productConfigs": [
+		{
+			"productName":"Silver",
+			"quantity":"glob glob",
+			"credit": 34
+		},
+{
+			"productName":"silver",
+			"quantity":"glob glob",
+			"credit": 34
+		}
+	]
+}
+output:-
+output:-
+Status Code 204 with no data(data will be stored in the product config table).
+4).ProductCredit Api:-
+This Api will retrieve the value af the credit fter checking if found appropriate.
+Request:-
+{
+		"productName":"Silver",
+		"quantity":"glob glob"
+	}
+	
+	Output:-
+	{
+	"Credit":34
+	}
+	
+	
+
+Unit testing:-
+Written integration tests for the project.
+Code Coverage can be reachedd to maximum.
